@@ -10,6 +10,11 @@ function navbar() {
   const navbar = document.createElement('nav');
   navbar.setAttribute('class', 'navbar');
 
+  const logoImg = document.createElement('img');
+  logoImg.setAttribute('class', 'restaurantLogo');
+  logoImg.setAttribute('alt', 'restaurant Logo');
+  navbar.appendChild(logoImg);
+
   const unorderedList = document.createElement('ul');
   unorderedList.setAttribute('class', 'unorderedList');
   navbar.appendChild(unorderedList);
@@ -23,12 +28,21 @@ function navbar() {
   listItems[0].appendChild(
     createHTMLElement('a', 'class', 'anchor-tag', 'Home')
   );
+  listItems[1].appendChild(
+    createHTMLElement('a', 'class', 'anchor-tag', 'About')
+  );
+  listItems[2].appendChild(
+    createHTMLElement('a', 'class', 'anchor-tag', 'Menu')
+  );
+  listItems[3].appendChild(
+    createHTMLElement('a', 'class', 'anchor-tag', 'Contact')
+  );
   // .appendChild(createHTMLElement('a', 'class', 'anchor-item', 'Home');
 
   return navbar;
 }
 
-function createHTMLElement(element, type, className, content) {
+export function createHTMLElement(element, type, className, content) {
   const elementMade = document.createElement(element);
   elementMade.setAttribute(type, className);
   elementMade.textContent = content;
