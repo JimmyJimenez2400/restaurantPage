@@ -1,14 +1,23 @@
+:root {
+  --persian-red: #C3423F;
+  --honey-yellow: #FDE74C;
+  --sky-blue: #5BC0EB;
+  --sooth-black: #211A1E;
+  --yummy-green: #9BC53D;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  /* border: 1px solid red; */
 }
 
 html,
 body {
   font-size: 16px;
-  color: white;
-  height: 100vh;
+  color: var(--sooth-black);
+  height: 100%;
 
 }
 
@@ -20,12 +29,23 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 #content {
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 100%;
   align-items: stretch;
   flex-wrap: wrap;
+  background-image: url(./img/AngelinsPizza.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  color: white;
 }
 
 /* #content>div {
@@ -50,11 +70,11 @@ a {
 }
 
 #header {
-  background-color: blue;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  background-color: transparent;
 }
 
 .navbar {
@@ -62,40 +82,112 @@ a {
   justify-content: space-between;
   align-items: center;
   width: 80%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.navbar img {
-  width: 40%;
+.restaurantLogo {
+  font-size: clamp(32px, 1.2vw, 60rem);
+  /* position: relative; */
+  background: linear-gradient(to right,
+      rgb(0, 255, 0) 0,
+      rgb(11, 145, 1) 33.3%,
+      rgb(239, 239, 239) 33.3%,
+      rgb(242, 242, 242) 66.6%,
+      rgb(255, 6, 6) 66.6%,
+      rgb(255, 11, 11))no-repeat;
+  background-size: 100% 3px;
 }
+
+/* .restaurantLogo::after {
+  content: '';
+  position: absolute;
+  background-color: red;
+  height: 10px;
+  width: 100px;
+  right: 0;
+  bottom: 0;
+} */
+
 
 .unorderedList {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
-  width: 40%;
+  font-size: clamp(16px, 1.5vw, 60rem);
 }
 
-.unorderedList>li {
-  flex-shrink: 1;
+.unorderedList li {
+  padding: 2rem 1rem;
 }
+
 
 .unorderedList .anchor-tag {
-  padding: 2rem;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
 }
 
 
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+.title {
+  padding: 2rem;
+}
+
+.see-menu {
+  font-size: clamp(16px, 1.3vw, 60rem);
+  text-transform: uppercase;
+  padding: 2rem;
+  border-radius: 1em;
+  border: none;
+  cursor: pointer;
+  background-color: var(--sooth-black);
+  color: var(--honey-yellow);
+  box-shadow: 30px 25px 5px rgba(232, 227, 227, 0.5);
+  transform: scale(1);
+  transition: ;
+}
+
+.see-menu:hover {
+  transform: scale(1.1);
+}
+
+
 #main {
-  background-color: red;
   display: flex;
   justify-content: center;
   height: 100vh;
 }
 
-
-
-#footer {
-  background-color: yellow;
+.about {
   display: flex;
+  width: 80%;
   justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10%;
+}
+
+.aboutImgLeft {
+  flex: 1;
+}
+
+.about-img {
+  border-radius: 50px;
+
+}
+
+.about-img {
+  object-fit: cover;
+}
+
+.aboutDetailsRight {
+  flex: 1;
 }

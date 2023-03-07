@@ -1,11 +1,14 @@
 import { createHTMLElement } from './header.js';
+import Owners from './img/Owners.png';
+import Store from './img/streetViewOutside.png';
 
 export function main() {
   const main = document.createElement('div');
   main.setAttribute('id', 'main');
 
-  // main.appendChild(Home());
-  main.appendChild(about());
+  main.appendChild(Home());
+  // main.appendChild(about());
+  // main.appendChild(menu());
 
   return main;
 }
@@ -17,7 +20,7 @@ function Home() {
   home.setAttribute('class', 'home');
 
   home.appendChild(
-    createHTMLElement('h1', 'class', 'title', "Welcome to John's Pizzeria!")
+    createHTMLElement('h1', 'class', 'title', "Welcome to Angelina's Pizzeria!")
   );
   home.appendChild(
     createHTMLElement('button', 'class', 'see-menu', 'See Menu')
@@ -32,20 +35,24 @@ function Home() {
 
 function about() {
   const about = createHTMLElement('div', 'class', 'about');
-  const aboutImg = about.appendChild(
+  const aboutImgLeft = createHTMLElement('div', 'class', 'aboutImgLeft');
+  about.appendChild(aboutImgLeft);
+
+  const aboutImg = aboutImgLeft.appendChild(
     createHTMLElement('img', 'class', 'about-img')
   );
 
   aboutImg.setAttribute('alt', 'About-Img');
+  aboutImg.src = Owners;
 
-  const aboutDetails = about.appendChild(
-    createHTMLElement('div', 'class', 'about-details')
+  const aboutDetailsRight = about.appendChild(
+    createHTMLElement('div', 'class', 'aboutDetailsRight')
   );
 
-  aboutDetails.appendChild(
+  aboutDetailsRight.appendChild(
     createHTMLElement('h2', 'class', 'about-h2', "Let's tell you about us!")
   );
-  aboutDetails.appendChild(
+  aboutDetailsRight.appendChild(
     createHTMLElement(
       'p',
       'class',

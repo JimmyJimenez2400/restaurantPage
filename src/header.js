@@ -10,9 +10,10 @@ function navbar() {
   const navbar = document.createElement('nav');
   navbar.setAttribute('class', 'navbar');
 
-  const logoImg = document.createElement('img');
+  const logoImg = document.createElement('h1');
   logoImg.setAttribute('class', 'restaurantLogo');
   logoImg.setAttribute('alt', 'restaurant Logo');
+  logoImg.textContent = "ANGELINA'S PIZZERIA";
   navbar.appendChild(logoImg);
 
   const unorderedList = document.createElement('ul');
