@@ -152,7 +152,7 @@ img {
   color: var(--honey-yellow);
   box-shadow: 30px 25px 5px rgba(232, 227, 227, 0.5);
   transform: scale(1);
-  transition: ;
+  
 }
 
 .see-menu:hover {
