@@ -9,7 +9,7 @@ The motivation for this project was because I wanted to learn how to build a web
 ## Tech Used
 Built with:
 -HTML
--CSS
+*CSS
 -JavaScript
 
 ## Credits
